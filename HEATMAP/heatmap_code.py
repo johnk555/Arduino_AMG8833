@@ -69,6 +69,7 @@ def main():
                         dedomena[i,j] = tArray[i*8+j];          # place new values on heatmap variable
         
                 heatmap = ax_lst.pcolor(dedomena, cmap=plt.cm.plasma)
+                fig.colorbar(heatmap, ax=ax_lst)  # Προσθέτει την κλίμακα
                 ax_lst.draw_artist(ax_lst.patch)
                 ax_lst.draw_artist(heatmap)
                 fig.canvas.blit(ax_lst.bbox)
